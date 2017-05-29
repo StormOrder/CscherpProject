@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<playlist>
+  <song>
+    <id>1</id>
+    <artiest>The Weeknd ft. Daft Punk</artiest>
+    <song>I Feel It Coming</song>
+    <speelduur>4:57</speelduur>
+    <catogorie>music</catogorie>
+    <publicatie>9 mrt. 2017</publicatie>
+    <file></file>
+  </song>
+  <song>
+    <id>2</id>
+    <artiest>The Chainsmokers &amp; Coldplay</artiest>
+    <song>Something Just Like This</song>
+    <speelduur>4:07</speelduur>
+    <catogorie>music</catogorie>
+    <publicatie>22 feb. 2017</publicatie>
+    <file></file>
+  </song>
+  <song>
+    <id>3</id>
+    <artiest>Imagine Dragons</artiest>
+    <song>Believer</song>
+    <speelduur>3:36</speelduur>
+    <catogorie>music</catogorie>
+    <publicatie>7 mrt. 2017</publicatie>
+    <file></file>
+  </song>
+  <song>
+    <id>4</id>
+    <artiest>Maroon 5 ft. Future</artiest>
+    <song>Cold</song>
+    <speelduur>3:50</speelduur>
+    <catogorie>music</catogorie>
+    <publicatie>13 feb. 2017</publicatie>
+    <file></file>
+  </song>
+  <song>
+    <id>5</id>
+    <artiest>The Chainsmokers</artiest>
+    <song>Paris</song>
+    <speelduur>3:48</speelduur>
+    <catogorie>music</catogorie>
+    <publicatie>12 jan. 2017</publicatie>
+    <file></file>
+  </song>
+</playlist>
