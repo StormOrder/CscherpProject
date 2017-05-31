@@ -1,31 +1,44 @@
 ﻿@using System.Data;
 @{
+
+
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    DataSet ds = new DataSet("playlist");
+    DataTable dtSongs = new DataTable("songs");
+    DataColumn dcId = new DataColumn("id");
+    DataColumn dcArtiest = new DataColumn("artiest");
+    DataColumn dcSong = new DataColumn("song");
+    DataColumn dcSpeelduur = new DataColumn("speelduur");
+    DataColumn dcCatogorie = new DataColumn("catogorie");
+    DataColumn dcPublicatie = new DataColumn("publicatie");
+    DataColumn dcFile = new DataColumn("file");
+
+    ds.Tables.Add(dtSongs);
+    dtSongs.Columns.Add(dcId);
+    dtSongs.Columns.Add(dcArtiest);
+    dtSongs.Columns.Add(dcSong);
+    dtSongs.Columns.Add(dcSpeelduur);
+    dtSongs.Columns.Add(dcCatogorie);
+    dtSongs.Columns.Add(dcPublicatie);
+    dtSongs.Columns.Add(dcFile);
+
+    ds.ReadXml(Server.MapPath("..\\App_Data\\PlayList.xml"));
+
+    Session["xmlDataSet"] = ds;
 }
 
-<h2>Index</h2>
+<style>
+    table img{
+        height: 50px;
+        width: 50px;
+    }
+    table tr td{
+        width:300px;
+    }
+</style>
 
-ds.ReadXml(Server.MapPath("..\\App_Data\\PlayList.xml"));
-
-DataSet ds = new DataSet("playlist");
-DataTable dtSongs = new DataTable("song");
-DataColumn dcId = new DataColumn("id");
-DataColumn dcArtiest = new DataColumn("artiest");
-DataColumn dcSong = new DataColumn("song");
-DataColumn dcSpeelduur = new DataColumn("speelduur");
-DataColumn dcCatogorie = new DataColumn("catogorie");
-DataColumn dcPublicatie = new DataColumn("Publicatie");
-DataColumn dcFile = new DataColumn("file");
-
-ds.Tables.Add(DtSongs);
-dtSongs.Columns.Add(dcId);
-dtSongs.Columns.Add(dcArtiest);
-dtSongs.Columns.Add(dcSong);
-dtSongs.Columns.Add(dcSpeelduur);
-dtSongs.Columns.Add(dcCatogorie);
-dtSongs.Columns.Add(dcPublicatie);
-dtSongs.Columns.Add(dcFile);
 
 
 <table>
@@ -39,6 +52,8 @@ dtSongs.Columns.Add(dcFile);
             <td>@dr["catogorie"]</td>
             <td>@dr["publicatie"]</td>
             <td>@dr["file"]</td>
+            <td><a href=""><img src="~/img/delete.png" /></a></td>
+            <td><a href=""><img src="~/img/play.png" /></a></td>
         </tr>
     }
 </table>

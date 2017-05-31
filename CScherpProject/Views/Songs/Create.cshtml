@@ -1,0 +1,21 @@
+﻿
+@using System.Data;
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+
+    DataSet ds = Session["xmlDataSet"] as DataSet;
+}
+
+<h2>Create</h2>
+<form method="post">
+    <input type="text" placeholder="Signer" />
+    <input type="text" placeholder="titel" />
+    <input type="text" placeholder="speelduur" />
+    <input type="text" placeholder="Categorie" />
+    <input type="text" placeholder="Uitgave" />
+    <input type="text" placeholder="File" />
+    <input type="submit" />
+</form>
