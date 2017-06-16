@@ -16,7 +16,7 @@ namespace CScherpProject.Controllers
 
         public ActionResult Create()
         {
-            return Create();
+            return View();
         }
     }
 }
